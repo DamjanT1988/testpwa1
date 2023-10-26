@@ -9,7 +9,7 @@ module.exports = {
     // ... (other plugins)
     
     new CopyWebpackPlugin([
-      { from: 'src/serviceWorker.js', to: '' },
+      { from: 'src/serviceWorker.js', to: 'public' },
     ]),
   ],
   // ... (other code)
