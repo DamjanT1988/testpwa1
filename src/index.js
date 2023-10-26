@@ -13,7 +13,7 @@ ReactDOM.render(
 
 // Check to make sure service workers are supported in the current browser,
 // and that the current page is accessed over HTTPS.
-if ('serviceWorker' in navigator && window.location.protocol === 'http:') {
+if ('serviceWorker' in navigator && window.location.protocol === 'http:' || 'https') {
     // Register the service worker after the page is loaded.
     window.addEventListener('load', function () {
         navigator.serviceWorker.register('/serviceWorker.js')
