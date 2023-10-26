@@ -1,10 +1,13 @@
 /* eslint no-restricted-globals: "off" */
 /* global self */
+// serviceWorker.js
 
 const CACHE_NAME = "version-1";
 const urlsToCache = ['index.html', 'offline.html'];
 
-// eslint-disable-next-line no-restricted-globals
+const self = this;
+
+// Install a service worker
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
@@ -13,21 +16,21 @@ self.addEventListener('install', (event) => {
 
                 return cache.addAll(urlsToCache);
             })
-    );
+    )
 });
 
-// eslint-disable-next-line no-restricted-globals
+// Listen for requests
 self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request)
             .then(() => {
-                return fetch(event.request)
+                return fetch(event.request) 
                     .catch(() => caches.match('offline.html'))
             })
     )
 });
 
-// eslint-disable-next-line no-restricted-globals
+// Activate the SW
 self.addEventListener('activate', (event) => {
     const cacheWhitelist = [];
     cacheWhitelist.push(CACHE_NAME);
@@ -42,3 +45,12 @@ self.addEventListener('activate', (event) => {
         ))
     )
 });
+
+// In your service worker file
+caches.open(CACHE_NAME)
+  .then((cache) => {
+    return cache.addAll(urlsToCache);
+  })
+  .catch((error) => {
+    console.error('Failed to open cache:', error);
+  });
