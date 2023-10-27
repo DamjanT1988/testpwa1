@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "App-serviceworkers",
+  "name": "App-serviceworkers",
   "icons": [
     {
       "src": "favicon.ico",
