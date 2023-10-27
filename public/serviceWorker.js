@@ -62,6 +62,7 @@ self.addEventListener('activate', (event) => {
 });
 
 // In your service worker file
+/*
 caches.open(CACHE_NAME)
   .then((cache) => {
     return cache.addAll(urlsToCache);
@@ -69,3 +70,4 @@ caches.open(CACHE_NAME)
   .catch((error) => {
     console.error('Failed to open cache:', error);
   });
+*/
