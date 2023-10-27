@@ -6,7 +6,6 @@ const CACHE_NAME = "version-1";
 const urlsToCache = [
     'index.html', 
     'offline.html', 
-    'serviceWorker.js', 
     'App.css', 
     'App.js', 
     'Calculator.js', 
