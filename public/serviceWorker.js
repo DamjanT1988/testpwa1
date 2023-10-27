@@ -6,29 +6,17 @@ const CACHE_NAME = "version-1";
 const urlsToCache = [
     '/',
     'index.html',
-    '/offline/offline.html'
+    'offline.html',
     /*'/static/js/main.63bc3d76.js',
     '/static/js/main.63bc3d76.js.LICENSE.js.LICENSE.txt',
     '/static/js/main.63bc3d76.js.map',
     '/static/css/main.5052a890.css',
-    '/static/css/main.5052a890.css.map',
-    '/offline/offline.html',
-    '/offline/manifest.json',
-    '/offline/robots.txt',
-    '/offline/favicon.ico',
-    '/offline/logo192.png',
-    '/offline/logo512.png',
-    '/offline/serviceWorker.js', 
-    'offline/offline.html', 
-    'offline/App.css', 
-    'offline/App.js', 
-    'offline/Calculator.js', 
-    'offline/Index.js',
-    'offline/Index.css',
-    'offline/logo.svg',
-    'offline/serviceWorker.js',
-    'offline/reportWebVitals.js',
-'offline/setupTests.js'*/];
+    '/static/css/main.5052a890.css.map',*/
+    'manifest.json',
+    'robots.txt',
+    'favicon.ico',
+    'logo192.png',
+    'logo512.png'];
 
 const self = this;
 
@@ -50,7 +38,14 @@ self.addEventListener('fetch', (event) => {
         caches.match(event.request)
             .then(() => {
                 return fetch(event.request) 
-                    .catch(() => caches.match('offline/offline.html'))
+                    .catch(() => caches.match(
+                        'offline.html',
+                        'manifest.json',
+                        'robots.txt',
+                        'favicon.ico',
+                        'logo192.png',
+                        'logo512.png'
+                        ))
             })
     )
 });
