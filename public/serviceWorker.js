@@ -6,7 +6,8 @@ const CACHE_NAME = "version-1";
 const urlsToCache = [
     '/',
     'index.html',
-    '/static/js/main.63bc3d76.js',
+    '/offline/offline.html'
+    /*'/static/js/main.63bc3d76.js',
     '/static/js/main.63bc3d76.js.LICENSE.js.LICENSE.txt',
     '/static/js/main.63bc3d76.js.map',
     '/static/css/main.5052a890.css',
@@ -27,7 +28,7 @@ const urlsToCache = [
     'offline/logo.svg',
     'offline/serviceWorker.js',
     'offline/reportWebVitals.js',
-    'offline/setupTests.js'];
+'offline/setupTests.js'*/];
 
 const self = this;
 

@@ -28,7 +28,7 @@ const urlsToCache = [
     'offline/serviceWorker.js',
     'offline/reportWebVitals.js',
     'offline/setupTests.js'];
-    
+
 const self = this;
 
 // Install a service worker
