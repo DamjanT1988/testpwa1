@@ -3,7 +3,16 @@
 // serviceWorker.js
 
 const CACHE_NAME = "version-1";
-const urlsToCache = ['index.html', 'offline.html'];
+const urlsToCache = [
+    'index.html', 
+    'offline.html', 
+    'serviceWorker.js', 
+    'App.css', 
+    'App.js', 
+    'Calculator.js', 
+    'Index.js',
+    'Index.css',
+    'logo.svg'];
 
 const self = this;
 
