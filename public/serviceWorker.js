@@ -39,12 +39,7 @@ self.addEventListener('fetch', (event) => {
             .then(() => {
                 return fetch(event.request) 
                     .catch(() => caches.match(
-                        'offline.html',
-                        'manifest.json',
-                        'robots.txt',
-                        'favicon.ico',
-                        'logo192.png',
-                        'logo512.png'
+                        'offline.html'
                         ))
             })
     )
