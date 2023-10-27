@@ -5,13 +5,14 @@
 const CACHE_NAME = "version-1";
 const urlsToCache = [
     'index.html', 
-    'offline/offline.html', 
-    'offline/App.css', 
-    'offline/App.js', 
-    'offline/Calculator.js', 
-    'offline/Index.js',
-    'offline/Index.css',
-    'offline/logo.svg'];
+    'offline.html', 
+    'serviceWorker.js', 
+    'App.css', 
+    'App.js', 
+    'Calculator.js', 
+    'Index.js',
+    'Index.css',
+    'logo.svg'];
 
 const self = this;
 
