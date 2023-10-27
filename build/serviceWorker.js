@@ -4,16 +4,31 @@
 
 const CACHE_NAME = "version-1";
 const urlsToCache = [
-    'index.html', 
-    'offline.html', 
-    'serviceWorker.js', 
-    'App.css', 
-    'App.js', 
-    'Calculator.js', 
-    'Index.js',
-    'Index.css',
-    'logo.svg'];
-
+    '/',
+    'index.html',
+    '/static/js/main.63bc3d76.js',
+    '/static/js/main.63bc3d76.js.LICENSE.js.LICENSE.txt',
+    '/static/js/main.63bc3d76.js.map',
+    '/static/css/main.5052a890.css',
+    '/static/css/main.5052a890.css.map',
+    '/offline/offline.html',
+    '/offline/manifest.json',
+    '/offline/robots.txt',
+    '/offline/favicon.ico',
+    '/offline/logo192.png',
+    '/offline/logo512.png',
+    '/offline/serviceWorker.js', 
+    'offline/offline.html', 
+    'offline/App.css', 
+    'offline/App.js', 
+    'offline/Calculator.js', 
+    'offline/Index.js',
+    'offline/Index.css',
+    'offline/logo.svg',
+    'offline/serviceWorker.js',
+    'offline/reportWebVitals.js',
+    'offline/setupTests.js'];
+    
 const self = this;
 
 // Install a service worker
